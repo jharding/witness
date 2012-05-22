@@ -1,0 +1,52 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <title>Witness Demo</title>
+    <link rel="stylesheet" type="text/css" href="demo.css" />
+  </head>
+  <body>
+    <div class='container'>
+      <div id='printables'>
+        <h2>Printables</h2>
+        <div id='printables-output'></div>
+      </div>
+
+      <div id='modifiers'>
+        <h2>Modifers</h2>
+        <div id='modifiers-output'></div>
+      </div>
+      
+      <div id='controls'>
+        <h2>Controls</h2>
+        <div id='controls-output'></div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src='../vendor/xevent/xevent.js'></script>
+    <script src='../vendor/underscore/underscore.js'></script>
+    <script src='../witness.js'></script>
+    <script>
+      var printables = document.getElementById('printables-output');
+      var modifiers = document.getElementById('modifiers-output');
+      var controls = document.getElementById('controls-output');
+      
+      var witness = new Witness();
+      witness.start();
+      witness.addCallback(function(key) {
+        if (key.isPrintable) {
+          printables.innerHTML += key.char + '<br />';
+        }
+
+        else {
+          controls.innerHTML += key.name + '<br />';
+        }
+
+        modifiers.innerHTML = 'alt: '+ key.modifiers.altKey + '<br />' +
+                              'shift: ' + key.modifiers.shiftKey + '<br />' +
+                              'ctrl: ' + key.modifiers.ctrlKey + '<br />' +
+                              'meta: ' + key.modifiers.metaKey + '<br /><br />';
+      });
+    </script>
+  </body>
+</html>

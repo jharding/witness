@@ -1,0 +1,23 @@
+.container {
+  width: 900px;
+  margin: 20 auto;
+  clear: both;
+}
+
+#printables {
+  float: left;
+  width: 300px;
+  text-align: center;
+}
+
+#modifiers {
+  float: left;
+  width: 300px;
+  text-align: center;
+}
+
+#controls {
+  float: left;
+  width: 300px;
+  text-align: center;
+}
