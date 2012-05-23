@@ -1,4 +1,4 @@
-//  Witness 0.0.0
+//  Witness 0.0.1
 //  (c) 2012 Jake Harding
 //  Witness is freely distributable under the MIT license.
 
