@@ -3,6 +3,12 @@
 //  Witness is freely distributable under the MIT license.
 
 (function(_, xevent) {
+    // default configuration 
+    var defaults = {
+        captureControlKeys: true,
+        capturePrintableChars: true
+    };
+
     // TODO: missing keypad and branded keys
     var CONTROL_KEY_CODES = {
         13: 'ENTER',
@@ -53,12 +59,6 @@
     // ASCII printable characters
     var isPrintable = function(charCode) {
         return charCode > 31 && charCode < 127; 
-    };
-
-    // default configuration 
-    var defaults = {
-        captureControlKeys: true,
-        capturePrintableChars: true
     };
 
     var Witness = function(config) {
