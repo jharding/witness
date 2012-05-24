@@ -52,7 +52,7 @@ When a witness instance captures keyboard input, it calls all of the callbacks t
 
 * `char`: If the keyboard input results in a printable character, this property will be a string representing that printable character. If the keyboard input results in a control key, this property will be `undefined`.
 
-`type`: If the keyboard input results in a control key, this property will be a string representing that control key. If the keyboard input results in a printable character, this property will be `undefined`. Note that each Witness instance contains a property named `CONTROL_KEYS` that is a map of all of the supported control keys.
+* `type`: If the keyboard input results in a control key, this property will be a string representing that control key. If the keyboard input results in a printable character, this property will be `undefined`. Note that each Witness instance contains a property named `CONTROL_KEYS` that is a map of all of the supported control keys.
 
 ## Browser Support
 
