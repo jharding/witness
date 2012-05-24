@@ -34,12 +34,12 @@
       var witness = new Witness();
       witness.start();
       witness.addCallback(function(key) {
-        if (key.isPrintable) {
+        if (key.isPrintableChar) {
           printables.innerHTML += key.char + '<br />';
         }
 
         else {
-          controls.innerHTML += key.name + '<br />';
+          controls.innerHTML += key.type + '<br />';
         }
 
         modifiers.innerHTML = 'alt: '+ key.modifiers.altKey + '<br />' +
